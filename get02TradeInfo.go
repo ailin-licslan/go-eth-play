@@ -10,8 +10,8 @@ import (
 	"math/big"
 )
 
-// getTradeInfo
-func getTradeInfo() {
+// get2TradeInfo
+func get2TradeInfo() {
 	client, err := ethclient.Dial("https://ethereum-sepolia-rpc.publicnode.com")
 	if err != nil {
 		log.Fatal(err)

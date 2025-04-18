@@ -8,8 +8,8 @@ import (
 	"math/big"
 )
 
-// getChainInfo
-func getChainInfo() {
+// get1ChainInfo
+func get1ChainInfo() {
 	//https://ethereum-sepolia-rpc.publicnode.com  https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345
 	//client, err := ethclient.Dial("https://eth-sepolia.g.alchemy.com/v2/<API_KEY>")
 	client, err := ethclient.Dial("https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx") //免费没有注册的地址 https://ethereum.publicnode.com/?sepolia

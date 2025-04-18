@@ -9,7 +9,8 @@ import (
 	"log"
 )
 
-func getWallet() {
+// get4Wallet
+func get4Wallet() {
 
 	//首先生成一个新的钱包，我们需要导入 go-ethereum crypto 包，该包提供用于生成随机私钥的 GenerateKey 方法。
 	privateKey, err := crypto.GenerateKey()

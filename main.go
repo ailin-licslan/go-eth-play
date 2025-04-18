@@ -3,9 +3,9 @@ package main
 func main() {
 
 	//1. 查询链上区块信息
-	//getChainInfo()
+	//get1ChainInfo()
 	//2. 查询链上交易信息
-	//getTradeInfo()
+	//get2TradeInfo()
 	//3. 查询链上收据信息
 	//getReceiptsInfo()
 	//4. 生成钱包

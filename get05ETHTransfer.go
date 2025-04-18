@@ -13,7 +13,7 @@ import (
 )
 
 // getETHTransfer
-func getETHTransfer() {
+func get5ETHTransfer() {
 
 	//转账交易包括打算转账的以太币数量，燃气限额，燃气价格，一个自增数(nonce)，接收地址以及可选择性的添加的数据。
 	//在发送到以太坊网络之前，必须使用发送方的私钥对该交易进行签名。

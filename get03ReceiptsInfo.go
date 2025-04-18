@@ -10,7 +10,8 @@ import (
 	"math/big"
 )
 
-func getReceiptsInfo() {
+// get3ReceiptsInfo
+func get3ReceiptsInfo() {
 	//client, err := ethclient.Dial("https://eth-sepolia.g.alchemy.com/v2/<API_KEY>")
 	client, err := ethclient.Dial("https://ethereum-sepolia-rpc.publicnode.com")
 	if err != nil {
