@@ -4,7 +4,6 @@ import (
 	"context"
 	"crypto/ecdsa"
 	"fmt"
-	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
@@ -19,7 +18,7 @@ import (
 func get6TokenTransfer() {
 
 	//Wallet address:   0xBC9c5bD5eC8f4FE7Dd0988EC236931122dc69f79 (deploy address)
-	//contract address: 0x1295afec813450401f84335e6f83ae4cbfe89e43 (token address)
+	//contract address: 0xfA58427b5aE27D64d14F32e812e1eebfeE6f637e (token address)
 	//to address:       0xa9E54ea6745cf2ec23235710eF4D38D7d3985bd2 (to address)
 	client, err := ethclient.Dial("https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx")
 	if err != nil {
@@ -53,7 +52,7 @@ func get6TokenTransfer() {
 	//待接收token的钱包地址
 	toAddress := common.HexToAddress("0xa9E54ea6745cf2ec23235710eF4D38D7d3985bd2")
 	//合约地址
-	tokenAddress := common.HexToAddress("0x1295afec813450401f84335e6f83ae4cbfe89e43")
+	tokenAddress := common.HexToAddress("0xfA58427b5aE27D64d14F32e812e1eebfeE6f637e")
 
 	transferFnSignature := []byte("transfer(address,uint256)")
 	hash := sha3.NewLegacyKeccak256()
@@ -63,7 +62,7 @@ func get6TokenTransfer() {
 	paddedAddress := common.LeftPadBytes(toAddress.Bytes(), 32)
 	fmt.Println(hexutil.Encode(paddedAddress)) // 0x0000000000000000000000004592d8f8d7b001e72cb26a73e4fa1806a51ac79d
 	amount := new(big.Int)
-	amount.SetString("1000000000000000000000", 10) // 1000 tokens
+	amount.SetString("10000000000000000000", 10) // 1000 tokens
 	paddedAmount := common.LeftPadBytes(amount.Bytes(), 32)
 	fmt.Println(hexutil.Encode(paddedAmount)) // 0x00000000000000000000000000000000000000000000003635c9adc5dea00000
 	var data []byte
@@ -71,13 +70,14 @@ func get6TokenTransfer() {
 	data = append(data, paddedAddress...)
 	data = append(data, paddedAmount...)
 
-	gasLimit, err := client.EstimateGas(context.Background(), ethereum.CallMsg{
-		To:   &toAddress,
-		Data: data,
-	})
-	if err != nil {
-		log.Fatal(err)
-	}
+	//gasLimit, err := client.EstimateGas(context.Background(), ethereum.CallMsg{
+	//	To:   &toAddress,
+	//	Data: data,
+	//})
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	var gasLimit uint64 = 100000
 	fmt.Println(gasLimit) // 23256
 	tx := types.NewTransaction(nonce, tokenAddress, value, gasLimit, gasPrice, data)
 
@@ -98,3 +98,14 @@ func get6TokenTransfer() {
 
 	fmt.Printf("tx sent: %s", signedTx.Hash().Hex()) // tx sent: 0xa56316b637a94c4cc0331c73ef26389d6c097506d581073f927275e7a6ece0bc
 }
+
+//1000  00000  00000  00000   00000
+
+//10    00  000  00000  00000  00000
+
+//API server listening at: 127.0.0.1:54818
+//0xa9059cbb
+//0x000000000000000000000000a9e54ea6745cf2ec23235710ef4d38d7d3985bd2
+//0x0000000000000000000000000000000000000000000000008ac7230489e80000
+//100000
+//tx sent: 0x44666f94e1ab2fe71449b20088d3c92a2433b5a14f8991fc4d9a1d695570d348

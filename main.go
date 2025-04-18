@@ -15,14 +15,20 @@ func main() {
 	//6.代币转账
 	//get6TokenTransfer()
 	//7.获取账号yue
-	get7AccountBalance()
+	//get7AccountBalance()
+	//8.获取token余额
+	//get8TokenBalance()
+	//9.订阅区块
+	//get9SubBlock()
+	//10.部署合约
+	//get10DeployContract()
+	//get10DeployContractByClient()
+	//11.加载合约
+	//get11LoadContract()
+	//12.执行合约
+	//get12ExecContract()
+	//13.合约事件
+	//get13EventContractQuery()
+	get13EventContractSub()
 
 }
-
-//API server listening at: 127.0.0.1:60099
-//7358660519958519
-//0.00736
-//0.007358660519958519
-//0
-//0
-//7358660519958519

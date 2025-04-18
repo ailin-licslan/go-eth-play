@@ -12,7 +12,7 @@ import (
 func getChainInfo() {
 	//https://ethereum-sepolia-rpc.publicnode.com  https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345
 	//client, err := ethclient.Dial("https://eth-sepolia.g.alchemy.com/v2/<API_KEY>")
-	client, err := ethclient.Dial("https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345") //免费没有注册的地址 https://ethereum.publicnode.com/?sepolia
+	client, err := ethclient.Dial("https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx") //免费没有注册的地址 https://ethereum.publicnode.com/?sepolia
 	if err != nil {
 		log.Fatal(err)
 	}

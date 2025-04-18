@@ -32,10 +32,10 @@ func get7AccountBalance() {
 	}
 	fmt.Println(balance) // balance = 218299403785650151
 
-	//TODO balance 转 ETH unit
+	//balance 转 ETH unit
 	fmt.Println(getETHUnit(balance))
 
-	blockNumber := big.NewInt(5532993)
+	blockNumber := big.NewInt(8141034)
 	balanceAt, err := client.BalanceAt(context.Background(), account, blockNumber)
 	if err != nil {
 		log.Fatal(err)
