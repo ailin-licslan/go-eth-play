@@ -19,6 +19,7 @@ func get1ChainInfo() {
 
 	blockNumber := big.NewInt(5671744)
 
+	//block number is nil , will fetch last one block information
 	header, err := client.HeaderByNumber(context.Background(), blockNumber)
 	fmt.Println(header.Number.Uint64())     // 5671744
 	fmt.Println(header.Time)                // 1712798400
