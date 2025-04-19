@@ -11,7 +11,7 @@ import (
 	"github.com/ethereum/go-ethereum/ethclient"
 )
 
-var infuraURL = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345"
+var infuraURL = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx"
 var ganacheURL = "http://localhost:8545"
 
 func main() {

@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	infuraURL = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345"
+	infuraURL = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx"
 	url       = "https://kovan.infura.io/v3/0c7b3f204f37416388610fb274b0452c"
 	murl      = "https://mainnet.infura.io/v3/0c7b3f204f37416388610fb274b0452c"
 )

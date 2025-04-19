@@ -14,8 +14,8 @@ import (
 )
 
 var (
-	url  = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345" //测试网
-	murl = "https://mainnet.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764345" //主网
+	url  = "https://sepolia.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx" //测试网
+	murl = "https://mainnet.infura.io/v3/00fdc4fc92d945ea9e8b5a0157764xxx" //主网
 )
 
 // transferring Ether between accounts using Golang
